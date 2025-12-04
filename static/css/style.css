@@ -1,0 +1,302 @@
+/* ================================
+   VARIABLES GLOBALES DE COLORES Y TIPOGRAFÍA
+   ================================ */
+:root {
+  --color-primary: #3b82f6; /* Define el color principal azul del sitio */
+  --color-primary-dark: #2563eb; /* Versión más oscura del azul para efectos hover */
+  --color-secondary: #e5e7eb; /* Color gris claro secundario usado en botones */
+  --color-text-dark: #1f2937; /* Color oscuro principal para textos */
+  --color-text-light: #ffffff; /* Color blanco para textos claros */
+  --color-border: #000000; /* Color negro para bordes */
+  --color-bg-light: #f3f4f6; /* Color de fondo claro general */
+  --color-bg-category: #bfdbfe; /* Azul claro para la barra de categorías */
+  --color-bg-section: #d1d5db; /* Gris medio para títulos de sección */
+  --color-not-available: #9ca3af; /* Gris para estado "no disponible" */
+  --color-js: #d10000; /* Rojo usado cuando JS marca algo como no disponible */
+  --font-family: "Roboto", sans-serif; /* Fuente principal del sitio */
+}
+
+/* ================================
+   RESET GLOBAL BÁSICO
+   ================================ */
+* {
+  box-sizing: border-box; /* Hace que padding y border no sumen al tamaño total */
+  margin: 0; /* Elimina márgenes por defecto del navegador */
+  padding: 0; /* Elimina rellenos por defecto del navegador */
+}
+
+/* ================================
+   ESTILOS DEL BODY
+   ================================ */
+body {
+  font-family: var(--font-family); /* Aplica la fuente global */
+  color: var(--color-text-dark); /* Aplica el color de texto principal */
+  line-height: 1.5; /* Altura de línea para mejor lectura */
+  border: 3px solid var(--color-border); /* Borde negro alrededor del sitio */
+  min-height: 100vh; /* Altura mínima igual al alto de la pantalla */
+  display: flex; /* Activa flexbox */
+  flex-direction: column; /* Ordena los elementos en columna */
+}
+
+/* ================================
+   HEADER Y LOGO
+   ================================ */
+.header {
+  display: flex; /* Alinea elementos en fila */
+  justify-content: space-between; /* Separa elementos a los extremos */
+  align-items: center; /* Centra verticalmente */
+  padding: 15px 20px; /* Espaciado interno */
+  border-bottom: 1px solid var(--color-border); /* Línea inferior */
+}
+
+.logo-section {
+  display: flex; /* Alinea icono y texto */
+  align-items: center; /* Centra verticalmente */
+}
+
+.logo-text {
+  font-size: 28px; /* Tamaño del texto */
+  font-weight: 700; /* Texto en negrita */
+}
+
+.logo-icon {
+  font-size: 28px; /* Tamaño del icono */
+  color: var(--color-primary); /* Color azul del ícono */
+  margin-left: 5px; /* Separación entre texto e ícono */
+}
+
+/* ================================
+   BOTONES DE AUTENTICACIÓN
+   ================================ */
+.btn {
+  padding: 8px 12px; /* Tamaño interno del botón */
+  border: 1px solid var(--color-border); /* Borde del botón */
+  cursor: pointer; /* Cambia cursor a mano */
+  font-size: 14px; /* Tamaño del texto */
+  font-weight: 700; /* Negrita */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  transition: background-color 0.2s, color 0.2s; /* Suaviza animaciones */
+}
+
+.btn.primary {
+  background-color: var(--color-text-dark); /* Fondo oscuro */
+  color: var(--color-text-light); /* Texto blanco */
+}
+
+.btn.primary:hover {
+  background-color: #4b5563; /* Cambia el fondo al pasar el mouse */
+  border-color: #4b5563; /* Cambia color del borde */
+}
+
+.btn.secondary {
+  background-color: var(--color-bg-light); /* Fondo claro */
+  color: var(--color-text-dark); /* Texto oscuro */
+}
+
+.btn.secondary:hover {
+  background-color: #cfd8e5; /* Fondo ligeramente más oscuro al pasar el mouse */
+}
+
+/* ================================
+   BARRA DE PROCESO
+   ================================ */
+.process-nav {
+  display: flex; /* Alinea en fila */
+  justify-content: space-around; /* Espaciado uniforme */
+  padding: 10px 0; /* Espaciado vertical */
+  border-bottom: 1px solid var(--color-border); /* Línea inferior */
+}
+
+.process-step {
+  display: flex; /* Alinea texto e ícono */
+  align-items: center; /* Centra verticalmente */
+  font-size: 20px; /* Tamaño del texto */
+  font-weight: 700; /* Negrita */
+  color: #6b7280; /* Gris para estado inactivo */
+}
+
+.process-step.active {
+  color: var(--color-text-dark); /* Negro para el paso activo */
+}
+
+.process-step.active:hover {
+  color: var(--color-not-available); /* Cambia a gris al pasar el mouse */
+  cursor: pointer; /* Manito al pasar el mouse */
+}
+
+.process-step .icon {
+  margin-right: 5px; /* Separación entre icono y texto */
+  font-size: 28px; /* Tamaño del ícono */
+}
+
+/* ================================
+   HOVER DE PASOS INACTIVOS
+   ================================ */
+.process-step:not(.active):hover {
+  color: var(--color-text-dark); /* Cambia a oscuro */
+  cursor: pointer; /* Manito */
+}
+
+/* ================================
+   BARRA DE CATEGORÍAS
+   ================================ */
+.category-bar {
+  display: flex; /* Elementos en fila */
+  justify-content: space-around; /* Espaciados */
+  align-items: center; /* Centrados vertical */
+  background-color: var(--color-bg-category); /* Fondo azul claro */
+  padding: 10px 0; /* Espaciado */
+  border-bottom: 1px solid var(--color-border); /* Línea inferior */
+}
+
+.category-link {
+  text-decoration: none; /* Quita subrayado */
+  color: var(--color-text-dark); /* Texto oscuro */
+  font-weight: 400; /* Peso normal */
+  padding: 5px 10px; /* Espaciado */
+  transition: color 0.2s; /* Transición suave */
+}
+
+.category-link:hover {
+  color: var(--color-primary-dark); /* Azul oscuro en hover */
+  font-weight: 700; /* Se vuelve negrita */
+}
+
+.category-link.active {
+  font-weight: 700; /* Categoría activa en negrita */
+}
+
+/* ================================
+   CONTENIDO PRINCIPAL
+   ================================ */
+.content-container {
+  flex-grow: 1; /* Ocupa el espacio disponible */
+  padding: 0 20px; /* Margen lateral */
+}
+
+.section-title-bar {
+  background-color: var(--color-bg-section); /* Fondo gris */
+  text-align: center; /* Texto centrado */
+  padding: 15px 0; /* Espaciado */
+  margin-top: 20px; /* Separación superior */
+  margin-bottom: 20px; /* Separación inferior */
+}
+
+.section-title {
+  font-size: 24px; /* Tamaño del título */
+  font-weight: 700; /* Negrita */
+}
+
+.book-list {
+  display: flex; /* Tarjetas en fila */
+  gap: 20px; /* Espacio entre tarjetas */
+  justify-content: center; /* Centradas */
+  padding-bottom: 40px; /* Espacio inferior */
+}
+
+/* ================================
+   TARJETAS DE LIBROS
+   ================================ */
+.book-card {
+  width: 20%; /* Cada tarjeta ocupa el 20% */
+  text-align: center; /* Texto centrado */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animaciones suaves */
+  background-color: #d1d1d1; /* Fondo gris */
+  padding: 20px 0; /* Espaciado */
+  border-radius: 5%; /* Bordes redondeados */
+}
+
+.book-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra al pasar el mouse */
+  transform: translateY(-2px); /* Eleva ligeramente la tarjeta */
+  cursor: pointer; /* Manito */
+}
+
+.book-cover {
+  width: 100%; /* Imagen ocupa todo el ancho */
+  object-fit: contain; /* Evita que la imagen se recorte */
+  display: block; /* Convierte a bloque */
+  padding: 0 20px; /* Espacio lateral */
+}
+
+.book-info {
+  padding: 5px 0; /* Espaciado interno */
+}
+
+.book-title {
+  font-weight: 500; /* Negrita media */
+  font-size: 1.2rem; /* Tamaño del título */
+  margin-bottom: 3px; /* Separación inferior */
+}
+
+.book-author {
+  font-weight: 700; /* Negrita fuerte */
+  font-size: 1.5rem; /* Tamaño del autor */
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* ================================
+   BOTÓN RENTAR
+   ================================ */
+.rent-btn {
+  background-color: var(--color-bg-light); /* Fondo claro */
+  color: var(--color-text-dark); /* Texto oscuro */
+  padding: 5px 25px; /* Tamaño del botón */
+  font-size: 13px; /* Tamaño de texto */
+  font-weight: 400; /* Peso normal */
+}
+
+.rent-btn:hover {
+  background-color: var(--color-primary); /* Azul al pasar el mouse */
+  color: var(--color-text-light); /* Texto blanco */
+}
+
+/* ================================
+   ESTADO NO DISPONIBLE DESDE JS
+   ================================ */
+.rent-btn.no-available {
+  background-color: var(--color-js) !important; /* Rojo forzado */
+  color: var(--color-text-light) !important; /* Texto blanco */
+  border-color: var(--color-js) !important; /* Borde rojo */
+  cursor: default; /* Cursor normal */
+}
+
+.rent-btn.no-available:hover {
+  background-color: var(--color-not-available) !important; /* Gris */
+  color: var(--color-text-light) !important; /* Blanco */
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+.footer {
+  background-color: var(--color-text-dark); /* Fondo oscuro */
+  color: var(--color-text-light); /* Texto blanco */
+  text-align: center; /* Texto centrado */
+  padding: 15px 0; /* Espaciado */
+  font-size: 14px; /* Tamaño del texto */
+  border-top: 1px solid var(--color-border); /* Borde superior */
+}
+
+/* ================================
+   COPYRIGHT
+   ================================ */
+.copyright-section {
+  background-color: var(--color-primary); /* Fondo azul */
+  color: var(--color-bg-light); /* Texto claro */
+  padding: 10px 0; /* Espaciado */
+  font-size: 0.85rem; /* Tamaño pequeño */
+  text-align: center; /* Texto centrado */
+  width: 100%; /* Ancho completo */
+  margin-bottom: 0; /* Sin margen inferior */
+}
+
+.copyright-section a {
+  color: var(--color-btn-light); /* Color del enlace */
+  text-decoration: none; /* Quita subrayado */
+  font-weight: 700; /* Negrita */
+}
+
+.copyright-section a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}

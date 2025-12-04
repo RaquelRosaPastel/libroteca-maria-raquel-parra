@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- ================================
+         CONFIGURACIÓN BÁSICA DEL DOCUMENTO
+         ================================ -->
+
+    <!-- Codificación de caracteres en UTF-8 para soportar tildes y caracteres especiales -->
+    <meta charset="UTF-8" />
+
+    <!-- Configuración responsive para que el sitio se adapte a móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Libroteca</title>
+
+    <!-- Autor del documento -->
+    <meta name="author" content="raquel.parra.roldan@gmail.com" />
+
+    <!-- Descripción del sitio para buscadores (SEO) -->
+    <meta name="description" content="Libroteca" />
+
+    <!-- ================================
+         LIBRERÍAS Y ARCHIVOS EXTERNOS
+         ================================ -->
+
+    <!-- Librería de íconos Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Hoja de estilos principal del proyecto -->
+    <link rel="stylesheet" href="static/css/style.css" />
+
+    <!-- Fuente Roboto desde Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ================================
+         HEADER / ENCABEZADO PRINCIPAL
+         ================================ -->
+    <header class="header">
+      <!-- Sección del logo -->
+      <div class="logo-section">
+        <h1 class="logo-text">Libroteca</h1>
+        <!-- Ícono decorativo del logo -->
+        <i class="fas fa-book-open logo-icon"></i>
+      </div>
+
+      <!-- Botones de autenticación (login y registro) -->
+      <div class="auth-buttons">
+        <button class="btn primary login-btn">Inicio de Sesión</button>
+        <button class="btn secondary">Registro</button>
+      </div>
+    </header>
+
+    <!-- ================================
+         BARRA DE PROCESO (PASOS DE COMPRA)
+         ================================ -->
+    <nav class="process-nav">
+      <div class="process-step active">
+        <i class="fas fa-clipboard-list icon"></i> Elige tu libro
+      </div>
+      <div class="process-step active">
+        <i class="fas fa-check icon"></i> Revisa disponibilidad
+      </div>
+      <div class="process-step">
+        <i class="fas fa-clipboard-check icon"></i> Sepáralo
+      </div>
+      <div class="process-step"><i class="fas fa-truck icon"></i> Recíbelo</div>
+    </nav>
+
+    <!-- ================================
+         BARRA DE CATEGORÍAS DE LIBROS
+         ================================ -->
+    <div class="category-bar">
+      <a href="#" class="category-link active">Ficción</a>
+      <a href="#" class="category-link">Históricos</a>
+      <a href="#" class="category-link">Tecnología</a>
+      <a href="#" class="category-link">Autoayuda</a>
+      <a href="#" class="category-link">Poesía</a>
+    </div>
+
+    <!-- ================================
+         CONTENIDO PRINCIPAL
+         ================================ -->
+    <main class="content-container">
+      <!-- Barra del título dinámico de la sección -->
+      <div class="section-title-bar">
+        <h2 class="section-title">Todos los libros</h2>
+      </div>
+
+      <!-- ================================
+           LISTADO DE LIBROS
+           ================================ -->
+      <section class="book-list">
+        <!-- TARJETA DE LIBRO 1 -->
+        <div class="book-card">
+          <img
+            src="resources/images/cien.jpg"
+            alt="Portada de Cien Años de Soledad"
+            class="book-cover"
+          />
+
+          <!-- Información del libro -->
+          <div class="book-info">
+            <p class="book-title">Cien Años de Soledad</p>
+            <p class="book-author">Gabriel García Márquez</p>
+          </div>
+
+          <!-- Botón para rentar -->
+          <button class="btn rent-btn">Rentar</button>
+        </div>
+
+        <!-- TARJETA DE LIBRO 2 -->
+        <div class="book-card">
+          <img
+            src="resources/images/rayuela.jpg"
+            alt="Portada de Rayuela"
+            class="book-cover"
+          />
+
+          <div class="book-info">
+            <p class="book-title">Rayuela</p>
+            <p class="book-author">Julio Cortázar</p>
+          </div>
+
+          <button class="btn rent-btn">Rentar</button>
+        </div>
+
+        <!-- TARJETA DE LIBRO 3 -->
+        <div class="book-card">
+          <img
+            src="resources/images/travesuras.jpg"
+            alt="Portada de Travesuras de la Niña Mala"
+            class="book-cover"
+          />
+
+          <div class="book-info">
+            <p class="book-title">Travesuras de la Niña Mala</p>
+            <p class="book-author">Mario Vargas Llosa</p>
+          </div>
+
+          <button class="btn rent-btn">Rentar</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================================
+         FOOTER / PIE DE PÁGINA
+         ================================ -->
+    <footer class="footer">Todos los derechos reservados. Libroteca</footer>
+
+    <!-- ================================
+         SECCIÓN DE COPYRIGHT
+         ================================ -->
+    <div class="copyright-section">
+      <div class="container">
+        <p>
+          2025 Skillnest - Desarrollada por
+          <a href="mailto:raquel.parra.roldan@gmail.com">
+            raquel.parra.roldan@gmail.com
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- ================================
+         ARCHIVO JAVASCRIPT PRINCIPAL
+         ================================ -->
+    <script src="static/js/script.js"></script>
+  </body>
+</html>
