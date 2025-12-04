@@ -1,74 +1,83 @@
-📚 Proyecto Libroteca - Catálogo de Libros
-📝 Descripción del Proyecto
-Libroteca es una maqueta (Wireframe/Mockup) interactiva que simula la interfaz de un catálogo de alquiler de libros en línea. El objetivo principal de este proyecto es demostrar habilidades en la maquetación web y la implementación de funcionalidades dinámicas básicas utilizando HTML, CSS y JavaScript puro.
 
-El diseño sigue una estructura de caja simple y utiliza colores planos para simular un estilo de wireframe pulido, incorporando efectos hover para mejorar la experiencia de usuario.
+<img width="1600" height="849" alt="screencapture-127-0-0-1-5500-2025-12-04-20_29_23" src="https://github.com/user-attachments/assets/4c200f3a-6a00-493a-a7a5-f9499e940b8b" />
 
-🛠️ Tecnologías Utilizadas
-HTML5: Estructura semántica del contenido.
+# 📚 Proyecto Libroteca - Catálogo de Libros
 
-CSS3: Estilos, diseño de layout (Flexbox) y efectos de transición (hover).
+## 📝 Descripción General
 
-JavaScript (ES6+): Implementación de la interactividad del catálogo y la gestión de estados.
+**Libroteca** es una **maqueta (Mockup) interactiva** que simula la interfaz de un catálogo de alquiler de libros en línea. El proyecto tiene como objetivo principal demostrar habilidades en la maquetación web y la implementación de funcionalidades dinámicas básicas utilizando tecnologías web esenciales.
 
-Font Awesome (CDN): Librería utilizada para los iconos de la cabecera y el proceso de compra.
+El diseño sigue una **estructura de caja simple** (Wireframe) con **colores planos**, incorporando efectos visuales como el `hover` y la gestión de estados para mejorar la experiencia de usuario.
 
-🚀 Instalación y Ejecución
-No se requiere ninguna instalación compleja ni servidor.
+---
 
-Clonar o Descargar: Descarga o clona el repositorio que contiene los siguientes archivos:
+## 🛠️ Tecnologías Utilizadas
 
-index.html
+| Tecnología | Rol en el Proyecto |
+| :--- | :--- |
+| **HTML5** | Estructura semántica del contenido. |
+| **CSS3** | Estilos, diseño de *layout* (Flexbox) y efectos de transición (`hover`). |
+| **JavaScript (ES6+)** | Implementación de la interactividad del catálogo y la gestión de estados. |
+| **Font Awesome (CDN)** | Librería utilizada para los iconos de la cabecera y la barra de proceso. |
 
-styles.css
+---
 
-script.js
+## 🚀 Instalación y Ejecución
 
-Abrir en Navegador: Simplemente haz doble clic en el archivo index.html para abrir la aplicación directamente en tu navegador web predeterminado.
+La aplicación se ejecuta de forma local sin necesidad de configuraciones complejas ni servidores.
 
-✨ Funcionalidades Interactivas
-El proyecto incluye las siguientes interacciones implementadas con JavaScript y CSS:
+1.  **Clonar o Descargar:** Obtén los archivos del repositorio:
+    * `index.html`
+    * `styles.css`
+    * `script.js`
+2.  **Abrir en Navegador:** Simplemente haz **doble clic** en el archivo `index.html` para abrir la aplicación directamente en tu navegador web predeterminado.
 
-1. Navegación por Géneros
-Acción: Al hacer clic en cualquiera de los enlaces de la barra de categorías (Ficción, Históricos, etc.).
+---
 
-Efecto: El elemento clickeado se marca como activo (.active) y el Título de la Sección (Ficción, Poesía, etc.) se actualiza dinámicamente para reflejar el género seleccionado.
+## ✨ Funcionalidades Interactivas (JavaScript & CSS)
 
-2. Estado del Botón "Rentar"
-Acción: Al hacer clic en el botón "Rentar" de cualquier tarjeta de libro.
+El proyecto incluye las siguientes interacciones para simular una aplicación real:
 
-Efecto:
+### 1. 📂 Navegación por Géneros
 
-El texto del botón cambia a "No disponible".
+* **Acción:** Clic en un enlace de la barra de categorías.
+* **Efecto:**
+    * El enlace clickeado se marca como **activo** (`.active`).
+    * El **Título de la Sección** (`.section-title`) se actualiza dinámicamente (ej., de "Ficción" a "Poesía") para reflejar el género seleccionado.
 
-Se aplica la clase CSS .no-available para cambiar el fondo a color gris y eliminar los efectos hover, indicando que la acción ya no está disponible.
+### 2. ⛔ Estado del Botón "Rentar"
 
-Si se hace clic de nuevo, el estado se revierte a "Rentar".
+* **Acción:** Clic en el botón **"Rentar"** de cualquier tarjeta de libro.
+* **Efecto:**
+    * El texto cambia a **"No disponible"**.
+    * Se aplica la clase CSS `.no-available`, cambiando el fondo a color **Rojo** y eliminando el `hover`.
+    * Si se hace clic de nuevo, el estado se revierte a "Rentar".
 
-3. Alerta de Inicio de Sesión
-Acción: Al hacer clic en el botón "Inicio de Sesión" en la esquina superior derecha.
+### 3. 🔑 Alerta de Inicio de Sesión
 
-Efecto: Muestra una ventana de alerta con el mensaje: "Inicio de sesión exitoso".
+* **Acción:** Clic en el botón **"Inicio de Sesión"** en la cabecera.
+* **Efecto:** Muestra una ventana de alerta nativa con el mensaje: "Inicio de sesión exitoso".
 
-4. Efectos Hover
-Se han añadido transiciones y efectos hover sutiles para mejorar la usabilidad:
+### 4. 🖱️ Efectos Visuales (`Hover`)
 
-Botones de Cabecera: Cambio de color de fondo al pasar el mouse.
+Se han implementado transiciones para guiar al usuario e indicar elementos interactivos:
 
-Enlaces de Categoría: El texto se hace más oscuro y en negrita.
+* **Botones Principales:** Cambio de color de fondo al pasar el *mouse*.
+* **Enlaces de Categoría:** El texto se oscurece y pasa a negrita.
+* **Tarjetas de Libro:** La tarjeta completa se eleva ligeramente y muestra una sombra (`box-shadow`), sugiriendo que es clickeable.
 
-Tarjetas de Libro: La tarjeta completa se eleva y muestra una sombra suave (box-shadow), indicando que el elemento es interactivo.
+---
 
-Botón Rentar (Estado Disponible): El botón cambia de gris claro a un fondo azul (--color-primary).
+## 🎨 Estructura de Estilos
 
-🎨 Estructura de Estilos
-El diseño se ha basado en la siguiente estructura de layout:
+El CSS está organizado para facilitar la personalización:
 
-Colores: Uso de variables CSS (:root) para manejar la paleta de colores (Azules y Grises).
+* **Paleta de Colores:** Uso de **variables CSS** (`:root`) para definir todos los códigos hexadecimales del diseño.
+* **Layout:** Utilización de **Flexbox** para la alineación del *header*, la barra de proceso y la lista de libros (`.book-list`).
+* **Responsividad:** (Nota: Este *mockup* está optimizado para la vista de **escritorio**).
 
-Layout: Uso de Flexbox para la alineación del header, la barra de proceso y la lista de libros (.book-list).
+---
 
-Responsividad: (Nota: Este mockup está optimizado para escritorio y no incluye media queries para dispositivos móviles).
+## 👤 Autor
 
-👤 Autor
-Raquel Parra Roldán
+**Raquel Parra Roldán**
